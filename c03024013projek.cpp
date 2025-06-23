@@ -114,3 +114,13 @@ void hapusPelanggan() {
     tampilkanPelanggan();
 }
 
+void totalHarga() {
+    system("cls");
+    int total = 0;
+    for (Node* p = head; p!= nulltpr; p = p->next)
+      total += p->data.hargaitem;
+
+    cout << "Total seluruh harga top up: Rp" << total << endl;
+    getch();
+}
+
