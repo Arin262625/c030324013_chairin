@@ -34,10 +34,10 @@ void tampilkanPelanggan() {
     if (head == nullptr) {
         cout << "Belum ada data pelanggan.\n";
     }else{
-                cout << letf << setw(5) << "No"
+                cout << left << setw(5) << "No"
         << setw(20) << "Nama"
         << setw(20) << "Item"
-        << setw(15) << "Harga item" << endk;
+        << setw(15) << "Harga item" << endl;
 
         int no =1;
         for (Node*p = head; p!= nullptr; p = p->next){
@@ -47,5 +47,27 @@ void tampilkanPelanggan() {
             << "Rp" << p->data.hargaitem << endl;
         }
     }
+    getch();
+}
+
+void tambahPelanggan() {
+    system("cls");
+    Node* baru =  new Node;
+    cout << "Nama Pelanggan: "; cin >> ws;
+   getline(cin,baru->data.nama);
+    cout << "item yang dipilih: "; getline(cin,baru->data.namaitem);
+    cout << "Harga Top Up:Rp "; cin >> baru-baru->next = nullptr;
+
+    if (head == nullptr){
+        head = baru;
+    }else{
+        Node* p = head;
+
+        while (p->next!= nullptr)
+          p = p->next;
+        p->next = baru;
+    }
+
+    cout << "Data berhasil ditambahkan!\n";
     getch();
 }
